@@ -37,9 +37,13 @@
 		{
 			"id": "",
 			"url": ""
+		},
+		{
+			"id": "3f67230df6b20042",
+			"url": "/images/background/3f67230df6b20042.jpg"
 		}
 	],
-	"currentBackgroundImageId": "",
+	"currentBackgroundImageId": "3f67230df6b20042",
 	"socialButtons": [
 		{
 			"id": "github",
@@ -63,7 +67,7 @@
 			"order": 1
 		}
 	],
-	"clockShowSeconds": false,
+	"clockShowSeconds": true,
 	"summaryInContent": false,
 	"isCachePem": false,
 	"hideEditButton": false,
