@@ -51,6 +51,13 @@
 			"value": "https://github.com/cf177",
 			"label": "Github",
 			"order": 1
+		},
+		{
+			"id": "button-1774345120407",
+			"type": "link",
+			"value": "https://www.cncfn.cn/",
+			"label": "666の个人小站",
+			"order": 2
 		}
 	],
 	"clockShowSeconds": true,
