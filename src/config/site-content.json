@@ -58,6 +58,13 @@
 			"value": "https://www.cncfn.cn/",
 			"label": "666の个人小站",
 			"order": 2
+		},
+		{
+			"id": "button-1774404415116",
+			"type": "link",
+			"value": "https://ww.789652.xyz",
+			"label": "666の音乐分享",
+			"order": 3
 		}
 	],
 	"clockShowSeconds": true,
