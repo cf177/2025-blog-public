@@ -1,4 +1,3 @@
-markdown
 # 1Panel 部署 Meting API 教程
 
 ## 1. 安装 Meting API
