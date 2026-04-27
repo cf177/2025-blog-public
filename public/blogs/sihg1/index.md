@@ -52,7 +52,6 @@ text
 
 在配置文件里与其它 location 项同级添加内容：
 
-nginx
 location /meting/ {
   proxy_pass http://localhost:3000/; # 设置的端口
   proxy_set_header X-Forwarded-Host $scheme://$host:$server_port/meting;
