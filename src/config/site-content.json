@@ -51,13 +51,6 @@
 			"value": "https://github.com/cf177",
 			"label": "Github",
 			"order": 1
-		},
-		{
-			"id": "button-1774404415116",
-			"type": "link",
-			"value": "https://ww.789652.xyz",
-			"label": "666の音乐分享",
-			"order": 2
 		}
 	],
 	"clockShowSeconds": true,
