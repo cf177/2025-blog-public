@@ -29,9 +29,9 @@ services:
     volumes:
       - ./data:/app/data
     environment:
-      # 可选：自定义初始管理员账号
-      # ADMIN_USERNAME: admin
-      # ADMIN_PASSWORD: yourpassword
+      TZ: Asia/Shanghai
+      ADMIN_USERNAME: admin
+      ADMIN_PASSWORD: 12345678
     restart: unless-stopped
 ```
 
