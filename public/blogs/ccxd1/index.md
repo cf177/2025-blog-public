@@ -19,7 +19,7 @@
 
 ## 链接与图片
 [链接](https://a.cncfn.cn)  
-![图片](https://bb.699006.xyz/i/2026/05/21/6a0e664bc1bfa.jpg)
+![图片](https://xxxx.699006.xyz/i/2026/06/16/6a3054807d414.jpg)
 
 ## 引用
 > 引用内容
@@ -95,7 +95,7 @@ echo "Hello Markdown"
 ```
 
 ## 6. 图片与链接
-![示例图片](https://bb.699006.xyz/i/2026/05/21/6a0e664bc1bfa.jpg)  
+![示例图片](https://xxxx.699006.xyz/i/2026/06/16/6a3054807d414.jpg)  
 [示例链接](https://a.cncfn.cn)
 
 ## 7. 表格
