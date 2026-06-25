@@ -96,7 +96,7 @@ echo "Hello Markdown"
 
 ## 6. 图片与链接
 ![示例图片](https://xxxx.699006.xyz/i/2026/06/16/6a3054807d414.jpg)  
-[示例链接](https://a.cncfn.cn)
+[示例链接](https://a.j005.cn)
 
 ## 7. 表格
 | 项目 | 描述 |
