@@ -361,7 +361,7 @@ https://adguardteam.github.io/HostlistsRegistry/assets/filter_21.txt
 ```
 ## 6.秋风
 ```
-https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Ru
+https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
 ```
 ## 7.海哥
 ```
