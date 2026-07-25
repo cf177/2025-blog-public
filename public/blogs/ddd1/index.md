@@ -380,3 +380,50 @@ https://raw.githubusercontent.com/2771936993/HG/main/hg1.txt
 📝 两种分流模式：支持黑名单模式与白名单模式灵活切换。
 
 [AdGuard DNS Divert 项目地址](https://github.com/qq5460168/AdGuard-DNS-Divert)
+
+## PaoPao DNS docker
+
+泡泡DNS是一个能一键部署递归DNS的docker镜像，它使用了unbound作为递归服务器程序，使用Redis作为底层缓存，此外针对China大陆，还有智能根据CN分流加密查询的功能，也可以自定义分流列表，可以自动更新IP库，分流使用了mosdns程序，加密查询使用dnscrypt程序，针对IPv4/IPv6双栈用户也有优化处理。
+泡泡DNS适合的使用场景：
+
+场景一：仅作为一个纯粹准确的递归DNS服务器，作为你其他DNS服务程序的上游，替代114.114.114.114,8.8.8.8.8等公共DNS上游
+场景二：作为一个局域网内具备CN智能分流、解决污染问题和IPv6双栈优化的DNS服务器，或者你的局域网已经从IP层面解决了“科学”的问题，需要一个能智能分流的DNS服务器。
+
+Docker Compose 配置用于部署 ‌PaoPaoDNS‌，这是一个基于 SmartDNS 内核优化的 DNS 服务器，主要特点是针对中国大陆网络环境进行了优化（如分流、去广告、加速等）
+```
+version: '3.8'
+services:
+  paopaodns:
+    image: sliamb/paopaodns:latest
+    container_name: paopaodns
+    volumes:
+      - ./mydata:/data
+    environment:
+      CNAUTO: "yes"
+      DNSPORT: "53"
+      DNS_SERVERNAME: "ShellDns.ning.moe"
+      TZ: "Asia/Shanghai"
+      UPDATE: "weekly"
+      IPV6: "raw"
+      CNFALL: "yes"
+      EXPIRED_FLUSH: "yes"
+      CUSTOM_FORWARD_TTL: "0"
+      ADDINFO: "no"
+      USE_MARK_DATA: "yes"
+    restart: always
+    ports:
+      - "5533:53/tcp"
+      - "5533:53/udp"
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    mem_limit: 2.0G
+
+```
+PaopaodNS 服务已成功部署，要测试它是否正常工作，可从本地和网络两个层面验证。
+
+首先，在运行该容器的宿主机上，使用 dig 或 nslookup 命令向本地 5533 端口发起查询，确认服务监听并响应：
+```
+dig @127.0.0.1 -p 5533 www.baidu.com
+```
