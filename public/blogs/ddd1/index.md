@@ -367,6 +367,10 @@ https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ad
 ```
 https://raw.githubusercontent.com/2771936993/HG/main/hg1.txt
 ```
+## 8.DD
+```
+https://raw.githubusercontent.com/afwfv/DD-AD/refs/heads/release/DD-AD.txt
+```
 ## Adgruad Home 分流
 ## DNS 分流
 📦 零部署：无需本地运行环境，直接 Fork 后在线配置。
