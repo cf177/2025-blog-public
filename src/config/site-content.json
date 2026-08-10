@@ -44,22 +44,7 @@
 		}
 	],
 	"currentBackgroundImageId": "",
-	"socialButtons": [
-		{
-			"id": "button-1774334432572",
-			"type": "github",
-			"value": "https://github.com/cf177",
-			"label": "Github",
-			"order": 1
-		},
-		{
-			"id": "button-1786373326734",
-			"type": "wechat",
-			"value": "/images/social-buttons/340ee6b8e63a3ea3.jpg",
-			"label": "",
-			"order": 2
-		}
-	],
+	"socialButtons": [],
 	"clockShowSeconds": true,
 	"summaryInContent": false,
 	"isCachePem": false,
