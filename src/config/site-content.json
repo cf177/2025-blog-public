@@ -44,7 +44,15 @@
 		}
 	],
 	"currentBackgroundImageId": "",
-	"socialButtons": [],
+	"socialButtons": [
+		{
+			"id": "button-1786474353899",
+			"type": "wechat",
+			"value": "/images/social-buttons/340ee6b8e63a3ea3.jpg",
+			"label": "",
+			"order": 1
+		}
+	],
 	"clockShowSeconds": true,
 	"summaryInContent": false,
 	"isCachePem": false,
