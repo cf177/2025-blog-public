@@ -425,6 +425,60 @@ services:
     mem_limit: 2.0G
 
 ```
+```
+services:
+  paopaodns:
+    image: sliamb/paopaodns:latest
+    container_name: paopaodns
+    volumes:
+      - /opt/paopaodns/data:/data
+    environment:
+      CNAUTO: "yes"
+      DNSPORT: "53"
+      DNS_SERVERNAME: "ShellDns.ning.moe"
+      TZ: "Asia/Shanghai"
+      UPDATE: "weekly"
+      IPV6: "raw"
+      CNFALL: "yes"
+      EXPIRED_FLUSH: "yes"
+      CUSTOM_FORWARD_TTL: "0"
+      ADDINFO: "yes"
+      USE_MARK_DATA: "yes"
+    restart: always
+    ports:
+      - "5533:53/tcp"
+      - "5533:53/udp"
+    mem_limit: 1.5g
+```
+```
+version: '3'
+services:
+  paopaodns:
+    image: sliamb/paopaodns:latest
+    container_name: paopaodns
+    volumes:
+      - <宿主机地址>/mydata:/data    # 将数据挂载到容器内部的 /data 目录
+    environment:
+      CNAUTO: "yes"           # 是否CN规则分流（可选值: yes, no）
+      DNSPORT: "53"           # DNS 服务端口号
+      DNS_SERVERNAME: "ShellDns.ning.moe"  # DNS 服务器名称（不含空格的英文字符串）
+      TZ: "Asia/Shanghai"     # 时区设置
+      UPDATE: "weekly"        # 更新IP、域名库的频率（可选值: no, daily, weekly, monthly）
+      IPV6: "raw"              # 是否启用 IPv6（可选值: no, yes, only6, yes_only6, raw）
+      CNFALL: "yes"           # 是否包含中国大陆列表（可选值: no, yes）
+      EXPIRED_FLUSH: "yes"    # 是否自动清理过期缓存（可选值: no, yes）
+      CUSTOM_FORWARD_TTL: "0" # 自定义转发 TTL
+      ADDINFO: "yes"          # 在DNS查询结果中增加ADDITIONAL SECTION的调试信息，如结果来源、查询延迟、失败原因等，使用dig命令就可以实时追踪域名结果来源
+      USE_MARK_DATA: "yes"    # 全球百万域名库，在判断大陆分流的时候优先使用该数据.
+    restart: always
+    ports:
+      - "5533:53/tcp"           # 对外开放 TCP 53 端口
+      - "5533:53/udp"           # 对外开放 UDP 53 端口
+    deploy:
+      resources:
+        limits:
+          memory: 1.5G			#限制容器内存
+``
 PaopaodNS 服务已成功部署，要测试它是否正常工作，可从本地和网络两个层面验证。
 
 首先，在运行该容器的宿主机上，使用 dig 或 nslookup 命令向本地 5533 端口发起查询，确认服务监听并响应：
