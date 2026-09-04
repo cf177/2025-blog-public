@@ -478,10 +478,15 @@ services:
       resources:
         limits:
           memory: 1.5G			#限制容器内存
-``
+```
 PaopaodNS 服务已成功部署，要测试它是否正常工作，可从本地和网络两个层面验证。
 
 首先，在运行该容器的宿主机上，使用 dig 或 nslookup 命令向本地 5533 端口发起查询，确认服务监听并响应：
+
 ```
 dig @127.0.0.1 -p 5533 www.baidu.com
+```
+## Docker 部署 Unbound（纯正递归 DNS）：
+```
+docker run -d --name unbound -p 5533:53/udp -p 5533:53/tcp mvance/unbound:latest
 ```
